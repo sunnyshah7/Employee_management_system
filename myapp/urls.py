@@ -20,6 +20,7 @@ from django.urls import path,include
 from .views import home
 from .views import about
 from .views import service
+from website.debug_view import check_env
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +29,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('service/', service, name='service'),
     path('emp/', include('emp.urls')),
+    path('check-env/', check_env, name='check_env'),
     # path("", test, name="home"),
 
 ]
