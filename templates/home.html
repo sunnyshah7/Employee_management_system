@@ -1,0 +1,35 @@
+<html></html>
+<head>
+    <title>About Pour project</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        {% include 'navbar.html' %}
+        <h1>this is our home page</h1>
+        <form action="/home/" method="post">
+            {% csrf_token %}
+            <input type="text" name="check">
+            <button type="submit">send</button>
+        </form>
+        <p>This is a Django web application project named "Pour". It is designed to provide users with a platform to share and discover various drink recipes. The project aims to create a community where users can contribute their favorite recipes, rate them, and leave comments.</p>
+        <p>The main features of the Pour project include:</p>
+        <ul>
+            <li>User registration and authentication</li>
+            <li>Recipe submission and management</li>
+            <li>Search functionality to find specific recipes</li>
+            <li>Rating and commenting system for user feedback</li>
+            <li>Responsive design for mobile and desktop users</li>
+        </ul>
+        <p>The project is built using Django, a high-level Python web framework that encourages rapid development and clean, pragmatic design. The front-end is developed using HTML, CSS, and JavaScript to ensure a user-friendly interface.</p>
+        <p>We welcome contributions from the community to help improve the Pour project. If you have any suggestions or would like to contribute, please feel free to reach out!</p>
+        <button> contact us</button>
+        <h1>todays date is {{now}}</h1>
+        <hr>
+        <h1>Student name is {{student.student_name}}</h1>
+        {% if isActive %}
+        <h1>show all the programs {{list_of_program}}</h1>
+        {% else %}
+        <h1>No programs available</h1>
+        {% endif %}
+</body>
+</html>

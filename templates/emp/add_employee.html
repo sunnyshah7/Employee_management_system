@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    {% include 'emp/navbar.html' %}
+    <h1 class="text-center my-3">Add New Employee</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <form action="/emp/add/" method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="emp_name">Employee Name</label>
+                                <input type="text" id="emp_name" class="form-control" placeholder="Enter Employee Name" name="emp_name">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="emp_id">Employee ID</label>
+                                <input type="text" id="emp_id" class="form-control" placeholder="Enter Employee ID" name="emp_id">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="emp_phone">Employee Phone</label>
+                                <input type="text" id="emp_phone" class="form-control" placeholder="Enter Employee Phone" name="emp_phone">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="emp_email">Employee Email</label>
+                                <input type="email" id="emp_email" class="form-control" placeholder="Enter Employee Email" name="emp_email">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="emp_position">Employee Position</label>
+                                <input type="text" id="emp_position" class="form-control" placeholder="Enter Employee Position" name="emp_position">
+
+                            <div class="mb-3">
+                                <label for="emp_address">Employee Address</label>
+                                <textarea id="emp_address" class="form-control" rows="2" placeholder="Enter Employee Address" name="emp_address"></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <label class="form-check-label" for="emp_working">Working</label>
+                                <input type="checkbox" id="emp_working" class="form-check-input" name="emp_working" checked>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emp_department">Departments</label>
+                                <select name="emp_department" id="emp_department" class="form-control">
+                                    <option value="">Select Department</option>
+                                    <option value="CSE">Computer Science</option>
+                                    <option value="ME">Mechanical Engineering</option>
+                                    <option value="ECE">Electronics and Communication</option>
+                                    <option value="EE">Electrical Engineering</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary">Add Employee
+
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
