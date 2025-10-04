@@ -9,7 +9,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']  # Replace with your domain when you have it
+ALLOWED_HOSTS = ['employee-management-system-pv3z.onrender.com', '.onrender.com']
 
 # Database configuration with dj-database-url
 import dj_database_url
